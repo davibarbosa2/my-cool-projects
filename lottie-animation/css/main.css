@@ -1,0 +1,57 @@
+body {
+  background: #1b1b1b;
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  font-family: "Poppins";
+  color: white;
+}
+
+.container {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  background: #232323;
+  padding: 2em;
+}
+
+.container h1 {
+  margin: 0;
+}
+
+.container p {
+  color: gray;
+}
+
+button {
+  background: #343434;
+  margin-top: 2em;
+  border: none;
+  padding: 1em;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  outline: 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #424242;
+}
+
+button:active {
+  background: purple;
+}
+
+.svg {
+  width: 200px;
+  position: absolute;
+  top: 0px;
+  left: -50px;
+  pointer-events: none;
+  background-color: red;
+}
+/*# sourceMappingURL=main.css.map */
