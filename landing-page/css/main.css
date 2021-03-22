@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 :root {
-  --primary-color: #0070f3;
+  --primary-color: #a600f3;
 }
 
 html {
@@ -141,19 +141,19 @@ section {
 }
 
 .testimonials-section li {
-  background: #006db6;
+  background: #f7f7f7;
   text-align: center;
   padding: 2em 1em;
   width: 80%;
   margin: 0 auto 5em auto;
   border-radius: 1em;
-  color: white;
+  color: black;
 }
 
 .testimonials-section li img {
   width: 5em;
   height: 5em;
-  border: 5px solid #006db6;
+  border: 5px solid var(--primary-color);
   border-radius: 50%;
   margin-top: -4.5em;
 }
