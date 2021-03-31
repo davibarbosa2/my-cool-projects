@@ -1,0 +1,110 @@
+body {
+  font-family: "Poppins", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  font-weight: normal;
+  margin: 0;
+  height: 100vh;
+  background-color: #4158d0;
+  background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+}
+
+.calc {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 306px;
+  border-radius: 25px;
+  background: #f0f0f3;
+  border: rgba(0, 0, 0, 0.21);
+}
+
+.calc .calc-display {
+  height: auto;
+  border-radius: 25px;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  word-wrap: break-word;
+  padding: 10px;
+}
+
+.calc .calc-display .previous-operation {
+  color: #728ab7;
+  font-size: 1.5rem;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.calc .calc-display .result-operation {
+  color: white;
+  font-size: 2rem;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.calc .calc-grid {
+  width: 280px;
+  height: 330px;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  padding: 15px 12px 23px 14px;
+}
+
+.calc .calc-grid button {
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: none;
+  background: #bbbbf2;
+  -webkit-box-shadow: -10px -10px 30px #ffffff, 10px 10px 24px rgba(174, 174, 192, 0.4);
+          box-shadow: -10px -10px 30px #ffffff, 10px 10px 24px rgba(174, 174, 192, 0.4);
+  outline: none;
+  font-size: 24px;
+}
+
+.calc .calc-grid button:hover {
+  background: #4f4fe9;
+}
+
+.calc .calc-grid .clear,
+.calc .calc-grid .equal {
+  background: rgba(116, 95, 242, 0.76) !important;
+  font-weight: 400;
+}
+
+.calc .calc-grid .clear:hover,
+.calc .calc-grid .equal:hover {
+  background: #4f4fe9 !important;
+}
+
+.calc .calc-grid .span-two {
+  grid-column: span 2;
+  width: 115px;
+}
+
+.calc .calc-grid .span-three {
+  grid-column: span 3;
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
