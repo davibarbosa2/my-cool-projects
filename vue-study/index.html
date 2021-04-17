@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue study</title>
+    <link type"text/css" rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="nav-bar"></div>
+
+    <div id="app">
+      <div class="product">
+        <div class="product-image">
+          <img v-bind:src="image" alt="" />
+        </div>
+
+        <div class="product-info">
+          <h1>{{title}}</h1>
+          <p v-if="inStock">In Stock</p>
+          <p :class="{lineThrough: !inStock}" v-else>Out of Stock</p>
+          <p>{{sale}}</p>
+
+          <ul>
+            <li v-for="detail in details">{{detail}}</li>
+          </ul>
+
+          <div
+            v-for="(variant,index) in variants"
+            :key="variant.variantId"
+            class="color-box"
+            :style="{backgroundColor: variant.variantColor}"
+            @click="updateProduct(index)"
+          ></div>
+
+          <button
+            :disabled="!inStock"
+            v-on:click="addToCart"
+            :class="{disabledButton: !inStock}"
+          >
+            Add to cart
+          </button>
+          <button
+            :disabled="!inStock"
+            v-on:click="removeFromCart"
+            :class="{disabledButton: !inStock}"
+          >
+            Remove from cart
+          </button>
+
+          <div class="cart">
+            <p>Cart({{cart}})</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
